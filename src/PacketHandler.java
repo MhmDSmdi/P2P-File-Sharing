@@ -10,7 +10,7 @@ public class PacketHandler {
 
     public static Vector<byte[]> segmentFile(byte[] data){
         if (data.length < CHUNK_SIZE - MAX_INDEX_HEADER - 1) {
-            System.out.println("length of data: " + data.length);
+//            System.out.println("length of data: " + data.length);
             Vector<byte[]> chunks = new Vector<>(1);
             chunks.add(new byte[CHUNK_SIZE]);
             chunks.get(0)[0] = 0;
@@ -23,9 +23,9 @@ public class PacketHandler {
             return chunks;
         } else {
             int dataSize = data.length;
-            System.out.println("length of data: " + data.length);
+//            System.out.println("length of data: " + data.length);
             int numChunk = (int) Math.ceil((dataSize) / (CHUNK_SIZE - MAX_INDEX_HEADER - 1)) + 1;
-            System.out.println("number of chunks: " + numChunk);
+//            System.out.println("number of chunks: " + numChunk);
             Vector<byte[]> chunks = new Vector<>(numChunk);
             for (int i = 0; i < numChunk; i++) {
                 chunks.add(new byte[CHUNK_SIZE]);
