@@ -1,7 +1,8 @@
-// Java program to illustrate Client side
+package network;// Java program to illustrate Client side
 // Implementation using DatagramSocket
 
-import sun.security.timestamp.TimestampToken;
+import handler.DataHandler;
+import handler.PacketHandler;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -158,8 +159,8 @@ public class Peer {
     }
 
     public static void main(String[] args) {
-//        Peer a = new Peer("8465");
-        Peer b = new Peer("8456");
+        Peer a = new Peer("8465");
+//        network.Peer b = new network.Peer("8456");
 //        b.start();
 //        a.introduce();
     }

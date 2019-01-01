@@ -1,3 +1,5 @@
+package network;
+
 public enum PeerState {
     RECEIVER(0),
     SENDER(1),
